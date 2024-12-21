@@ -1,0 +1,29 @@
+type Query{
+    getComputerByProce(proce : String): [ComputerDto]
+}
+
+
+type Mutation{
+    saveComputer(Computer:ComputerInput):ComputerDto
+    deleteComputer( id : ID): Boolean
+}
+
+
+
+input ComputerInput{
+    proce :String
+    ram:Int
+    HardDrive:String
+    price:Float
+    macAddress:String
+
+}
+
+
+type ComputerDto{
+     proce :String
+     ram:Int
+     HardDrive:String
+     price:Float
+     macAddress:String
+}
